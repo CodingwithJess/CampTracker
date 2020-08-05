@@ -12,7 +12,6 @@
       "no-irregular-whitespace":"error",
       "no-unreachable": "error",
       "curly": "error",
-      "dot-notation": "error",
       "eqeqeq": "error",
       "no-empty-function": "error",
       "no-multi-spaces": "error",
@@ -31,11 +30,17 @@
       ],
       "quotes": [
           "error",
-          "single"
+          "double"
       ],
       "semi": [
           "error",
           "always"
       ]
-  }
+  },
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "env": {
+        "es6": true
+    }
 }
