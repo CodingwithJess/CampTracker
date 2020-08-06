@@ -1,6 +1,8 @@
-//Where we create tables
+// //Where we create tables
 // module.exports = (sequelize, DataTypes) => {
+//     const Campsite = sequelize.define("Campsite", {
 
+//     })
 // }
 
 
