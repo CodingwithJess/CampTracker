@@ -1,0 +1,17 @@
+body {
+    background: rgb(255, 250, 215);
+}
+
+.navbar {
+    background-color: rgb(18, 92, 11);
+    color: rgb(255, 250, 215);
+}
+#nav-item {
+    color: rgb(255, 250, 215) ;
+}
+h5 {text-align: center;
+}
+
+.card-link{
+    justify-content: center;
+}
