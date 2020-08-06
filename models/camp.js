@@ -1,11 +1,37 @@
-//Where we create tables
-// module.exports = (sequelize, DataTypes) => {
-
 module.exports = function (sequelize, DataTypes) {
-    const Campsites = sequelize.define("Campsites", {
-        name: DataTypes.STRING
-    });
-    return Campsites;
+  const Campsite = sequelize.define("Campsite", {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len:[1, 150]
+      }
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      validate: {
+        max: 5,
+        min: 0
+      }
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      validate: {
+        len: [1, 200]
+      }
+    },
+    hasVisited: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+  });
+  return Campsite;
 };
 
 
@@ -17,5 +43,6 @@ module.exports = function (sequelize, DataTypes) {
 //Rating-INTEGER
 //Comments-TEXT
 //hazVisited-BOOLEAN
+//wishlist
 
 
