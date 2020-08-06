@@ -8,11 +8,11 @@ const { db } = require("../models");
 //Routes
 //GET ROUTES-This shows the data from the datebase on the page
 module.exports = function (app) {
-    // GET route for getting all posts
-    app.get("/api/campsites/", function (req, res) {
-        Campsite.findAll({})
-            .then(function (Campsite) {
-                res.json(Campsite)
+  // GET route for getting all posts
+  app.get("/api/campsites/", function (req, res) {
+    Campsite.findAll({})
+      .then(function (Campsite) {
+        res.json(Campsite);
             });
 
     });
