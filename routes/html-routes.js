@@ -10,14 +10,14 @@ const path = require("path");
 
 module.exports = function(app){
   app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/index.handlebars"));
+    res.render(path.join(__dirname, "../views/index.handlebars"));
   });
 
   app.get("/saved", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/savedcampground.handlebars"));
+    res.render(path.join(__dirname, "../views/savedcampgrounds.handlebars"));
   });
 
   app.get("/wishlist", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/wishlist.handlebars"));
+    res.render(path.join(__dirname, "../views/wishlist.handlebars"));
   });
 };
