@@ -3,11 +3,11 @@ body {
 }
 
 .navbar {
-    background-color: rgb(18, 92, 11);
+    background-color: rgb(250, 243, 243);
     color: rgb(255, 250, 215);
 }
 #nav-item {
-    color: rgb(255, 250, 215) ;
+    color: rgb(109, 141, 113) ;
 }
 h5 {text-align: center;
 }
@@ -15,3 +15,9 @@ h5 {text-align: center;
 .card-link{
     justify-content: center;
 }
+.jumbotron {
+    background-image: url("../images/campground.jpg");
+    height:700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
