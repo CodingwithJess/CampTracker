@@ -12,6 +12,9 @@ app.use(express.static("public"));
 // requiring models for syncing
 const db = require("./models");
 
+// ROUTES
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,9 +32,6 @@ const routes = require("./controllers/campsitecontroller.js");
 //Require models for syncing
 
 
-// ROUTES
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
 
 //Sync sequelize models and start express app
 db.sequelize.sync().then(function () {

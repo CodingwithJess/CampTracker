@@ -20,35 +20,65 @@
                 <p class="lead"><img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
             </div>
         </div>
+    </nav>
+</div>
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid cards">
+        <div class="container">
+            <h1 class="display-4"></h1>
+            <p class="lead"><img id="logo" src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
+        </div>
     </div>
-    <ul>
-        {{#each campgrounds}}
-        {{#unless hasVisited}}
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card text-center">
-                    <div class="card-header">
-                        {{name}}
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    Add a campsite you'd like to visit someday!
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="name">Campsite name</label>
+                        <input type="text" class="campName" placeholder="Name">
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{location}}</h5>
-                        <p class="card-text">{{description}}
-                        </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="form-group">
+                        <label for="location">Campsite location</label>
+                        <input type="text" class="campLocation" placeholder="Location">
                     </div>
-                    <div class="card-footer text-muted">
-                        {{rating}}
+                    <div class="form-group">
+                        <label for="description">Give a brief description of what you're looking forward to at this campsite?</label>
+                        <textarea type="text" class="campDescription" placeholder="Your Description"></textarea>
                     </div>
-                    <button class="delete-btn" data-id="{{id}}">
-                         Delete campsite
-                    </button>
+                    <button type="submit" class="btn btn-default">Save your campsite!</button>
                 </div>
             </div>
         </div>
-    </div>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</body>
-
+        <ul>
+            {{#each campsite}}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                {{name}}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{location}}</h5>
+                                <p class="card-text">{{description}}
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                {{rating}}
+                            </div>
+                            <button class="delete-btn" data-id="{{id}}">
+                                Delete campsite
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </ul>
+        </body>
