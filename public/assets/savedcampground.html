@@ -20,82 +20,86 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
+            <a id="nav-item" class="navbar-brand" href="#">Homepage</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" id="nav-item" href="index.html">Home</a>
-                    <a class="nav-link" id="nav-item" href="savedcampground.html">Favorite Campsites</a>
-                    <a class="nav-link" id="nav-item" href="wishlist.html">One Day I'll Camp here!</a>
+
+                    <a class="nav-link" id="nav-item" href="savedcampground.html">Visited Campgrounds</a>
+                    <a class="nav-link" id="nav-item" href="wishlist.html">Campground Wishlist</a>
+
                 </div>
             </div>
         </nav>
     </div>
-      <div class="container ">
-        <div class="jumbotron jumbotron-fluid">
+
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid cards">
             <div class="container">
-                <h1 class="display-4">Wishlist</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                </p>
+                <h1 class="display-4"></h1>
+                <p class="lead"><img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
             </div>
         </div>
     </div>
-
-    <div class="container">
+    <div class="fav-container">
         <div class="row">
             <div class="col-12">
-                <div class="card text-center">
-                    <div class="card-header">
-                        Featured
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Campground Name:</label>
+                      <input type="text" class="form-control" id="campground-name" placeholder="Goose Creek">
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Campground Location:</label>
+                        <input type="text" class="form-control" id="campground-location" placeholder="Sedalia, CO">
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Campground Rating:</label>
+                      <br>
+                      <label for="exampleFormControlSelect1">(0-This place sucks, 5-This place is amazing!)</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Notes/Description:</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                </div>
+                  </form>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="card text-center">
-                    <div class="card-header">
-                        Featured
-                    </div>
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h4 class="card-name">Campground Name</h4>
+                      <h5 class="card-location">Campground Location</h5>
+                      <h5 class="card-rating">Campground Rating</h5>
+                      <p class="card-description">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Update</a>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
-                </div>
+                  </div> 
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="card text-center">
-                    <div class="card-header">
-                        Featured
-                    </div>
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h4 class="card-name">Campground Name</h4>
+                        <h5 class="card-location">Campground Location</h5>
+                        <h5 class="card-rating">Campground Rating</h5>
+                        <p class="card-description">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Update</a>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
-                </div>
+                  </div>
             </div>
         </div>
 
