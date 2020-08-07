@@ -10,6 +10,7 @@ const {
 //Routes
 //GET ROUTES-This shows the data from the datebase on the page
 module.exports = function (app) {
+
     // GET route for getting all posts
 
     app.get("/api/campsites/", function (req, res) {
@@ -45,14 +46,19 @@ module.exports = function (app) {
 
     // route to post to campsites
     app.post("/api/campsites", function (req, res) {
-        Campsite.create({
-            name: req.body.name,
-            body: req.body.body,
-            location: req.body.location
+        // console.log(req.body)
+       Campsite.create({
+           name: req.body.name,
+           description: req.body.description,
+           location: req.body.location,
+           rating: req.body.rating
+
         })
-            .then(function (Campsite) {
-                res.json(Campsite);
-            });
+           .then(function (Campsite) {
+               res.json(Campsite);
+           });
+
+        res.json({hello: "goodbye"});
 
     });
 
