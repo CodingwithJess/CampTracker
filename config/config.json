@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "DenverShred21@",
+    "password": "basketball5",
     "port": 3306,
     "database": "camp_db",
     "host": "127.0.0.1",

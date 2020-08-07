@@ -3,9 +3,7 @@
 // Dependencies
 
 //Require model
-const {
-    Campsite
-} = require("../models");
+const {Campsite} = require("../models");
 
 //Routes
 //GET ROUTES-This shows the data from the datebase on the page
@@ -45,10 +43,12 @@ module.exports = function (app) {
 
     // route to post to campsites
     app.post("/api/campsites", function (req, res) {
+        console.log(req.body);
         Campsite.create({
             name: req.body.name,
-            body: req.body.body,
-            location: req.body.location
+            description: req.body.description,
+            location: req.body.location,
+            
         })
             .then(function (Campsite) {
                 res.json(Campsite);
@@ -90,6 +90,8 @@ module.exports = function (app) {
     });
 
 };
+
+
 
 // Campsite Name-STRING
 // //Campsite Location-STRING

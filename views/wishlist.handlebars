@@ -41,17 +41,17 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">Campsite name</label>
-                        <input type="text" class="campName" placeholder="Name">
+                        <input type="text" class="campName" name="name" placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="location">Campsite location</label>
-                        <input type="text" class="campLocation" placeholder="Location">
+                        <input type="text" class="campLocation" name="location" placeholder="Location">
                     </div>
                     <div class="form-group">
                         <label for="description">Give a brief description of what you're looking forward to at this campsite?</label>
-                        <textarea type="text" class="campDescription" placeholder="Your Description"></textarea>
+                        <textarea type="text" class="campDescription" name="description" placeholder="Your Description"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default">Save your campsite!</button>
+                    <button type="submit" class="btn create-form btn-default">Save your campsite!</button>
                 </div>
             </div>
         </div>
@@ -81,4 +81,5 @@
             </div>
             {{/each}}
         </ul>
+        <script src="../../assets/js/wishlist.js"></script>
         </body>
