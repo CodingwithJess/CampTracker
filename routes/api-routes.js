@@ -86,19 +86,7 @@ module.exports = function (app) {
         })
     })
 
-
-
 };
-
-// future get routes for desired searches
-//POST ROUTES-This enters users input into the database
-
-
-
-//DELETE ROUTES-This deletes selected id from page AND database
-
-
-//PUT ROUTES-UPDATE-This updates data already stored in database
 
 // Campsite Name-STRING
 // //Campsite Location-STRING
