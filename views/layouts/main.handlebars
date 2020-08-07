@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>Camp Tracker</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="../../public/assets/js/index.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css">
-	</head>
+    <!-- fontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- GoogleFonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap" rel="stylesheet">
+    <!--Local stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <title>CampFound</title>
+</head>
 	<body>
+		{{!-- NAVBAR --}}
+		<div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a id="nav-item" class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" id="nav-item" href="savedcampground.html"><i class="fas fa-campground"></i> Visited Campgrounds</a>
+                    <a class="nav-link" id="nav-item" href="wishlist.html"><i class="far fa-compass"></i> Wishlist</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    {{!-- JUMBOTRON --}}
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid cards">
+            <div class="container">
+                <img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent">
+            </div>
+        </div>
+    </div>
 		{{{ body }}}
-		<script src="../../assets/js/savedcampground.js"></script>
+		
 	</body>
 </html>
