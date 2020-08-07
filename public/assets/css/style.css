@@ -1,13 +1,22 @@
 body {
-    background: rgb(255, 250, 215);
+    background-image: linear-gradient(to bottom, #43533e, #30473c, #233b38, #1c2e30, #182125);
+    padding:0;
+    margin: 0;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .navbar {
-    background-color: rgb(250, 243, 243);
-    color: rgb(255, 250, 215);
+    background-color: #182125;
+    text-align: center;
+    justify-items: center;
 }
 #nav-item {
-    color: rgb(109, 141, 113) ;
+    color:#fbb55e;
+    font-family: 'Quicksand', sans-serif;
 }
 h5 {text-align: center;
 }
@@ -16,8 +25,37 @@ h5 {text-align: center;
     justify-content: center;
 }
 .jumbotron {
-    background-image: url("../images/campground.jpg");
+    background-image: url("../images/CampFound1.jpg");
     height:700px;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    background-position: bottom;
+}
+
+#logo{
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}  
+
+.card-body{
+    background-color: #f9f2dc;
+    text-align: center;
+    border-radius: 12px;
+    padding:20px;
+    margin:20px;
+    height:250px;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+}
+
+button{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+}

@@ -4,40 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Saved campgrounds</title>
+    <!-- fontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- GoogleFonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap" rel="stylesheet">
+    <!--Local stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CampFound</title>
 </head>
 
 
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
+            <a id="nav-item" class="navbar-brand" href="#">Homepage</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" id="nav-item" href="index.html">Home</a>
-                    <a class="nav-link" id="nav-item" href="savedcampground.html">Favorite Campsites</a>
-                    <a class="nav-link" id="nav-item" href="wishlist.html">One Day I'll Camp here!</a>
+                    <a class="nav-link" id="nav-item" href="savedcampground.html">Visited Campgrounds</a>
+                    <a class="nav-link" id="nav-item" href="wishlist.html">Campground Wishlist</a>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="container ">
-        <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid cards">
             <div class="container">
-                <h1 class="display-4">My Favorite Campgrounds</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                </p>
+                <h1 class="display-4"></h1>
+                <p class="lead"><img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
             </div>
         </div>
     </div>
-
-
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -93,13 +96,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
-
-
-
+</body>
 
 </body>
 
