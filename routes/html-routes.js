@@ -1,7 +1,7 @@
 // !! WE MIGHT NOT NEED THIS FILE WITH HANDLEBARS
 const path = require("path");
 // html-routes.js - this file offers a set of routes for sending users to the various html pages
-const db = require("../models")
+const db = require("../models");
 //Dependencies-require path
 
 //Routes- module.exports
