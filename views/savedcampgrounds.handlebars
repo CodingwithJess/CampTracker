@@ -1,4 +1,4 @@
-    <body>
+
 
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -23,9 +23,39 @@
             </div>
         </div>
     </div>
+
+        <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Add some your favorite campsites that you've previously visited!
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">Campsite name</label>
+                            <input type="text" class="campName" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Campsite location</label>
+                            <input type="text" class="campLocation" placeholder="Location">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Give a brief description of your experience! What did you like?</label>
+                            <textarea type="tex" class="campDescription" placeholder="Your Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating</label>
+                            <input type="text" class="campRating" placeholder="Rating">
+                        </div>
+                        <button type="submit" class="btn btn-default">Save your campsite!</button>
+                </div>
+            </div>
+        </div>
+
+
     <ul>
-        {{#each campgrounds}}
-        {{#if hasVisited}}
+        {{#each campsite}}
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -37,7 +67,6 @@
                         <h5 class="card-title">{{location}}</h5>
                         <p class="card-text">{{description}}
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                     <div class="card-footer text-muted">
                         {{rating}}
@@ -49,8 +78,7 @@
             </div>
         </div>
     </div>
-        {{/if}}
         {{/each}}
     </ul>
-</body>
+
 
