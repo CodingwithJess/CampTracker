@@ -1,0 +1,1 @@
+INSERT INTO Campsites (name, location, rating, hasVisited, createdAt, updatedAt) VALUES (“Beach”, “Grand Lake”, 5, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (“42”, “Green Mountain Reservoir”, 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),(“Winding Road”, “Deckers”, 4, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
