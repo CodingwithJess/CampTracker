@@ -1,33 +1,32 @@
- <div class="container">
+    <body>
+
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
+            <a id="nav-item" class="navbar-brand" href="#">Homepage</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" id="nav-item" href="index.handlebars">Home</a>
-                    <a class="nav-link" id="nav-item" href="savedcampgrounds.handlebars">Favorite Campsites</a>
-                    <a class="nav-link" id="nav-item" href="wishlist.handlebars">One Day I'll Camp here!</a>
+                    <a class="nav-link" id="nav-item" href="savedcampground.html">Visited Campgrounds</a>
+                    <a class="nav-link" id="nav-item" href="wishlist.html">Campground Wishlist</a>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="container ">
-        <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid cards">
             <div class="container">
-                <h1 class="display-4">My Favorite Campgrounds</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                </p>
+                <h1 class="display-4"></h1>
+                <p class="lead"><img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
             </div>
         </div>
     </div>
-
-
+    <ul>
+        {{#each campgrounds}}
+        {{#if hasVisited}}
     <div class="container">
-        <ul>
-            {{#each campgrounds}}
-            {{#if hasVisited}}
         <div class="row">
             <div class="col-12">
                 <div class="card text-center">
@@ -38,16 +37,20 @@
                         <h5 class="card-title">{{location}}</h5>
                         <p class="card-text">{{description}}
                         </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                     <div class="card-footer text-muted">
                         {{rating}}
                     </div>
+                    <button class="delete-btn" data-id="{{id}}">
+                         Delete campsite
+                    </button>
                 </div>
             </div>
         </div>
-            {{/if}}
-            {{/each}}
-        </ul>
-
     </div>
+        {{/if}}
+        {{/each}}
+    </ul>
+</body>
 
