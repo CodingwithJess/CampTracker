@@ -19,7 +19,7 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a id="nav-item" class="navbar-brand" href="#">Homepage</a>
+            <a id="nav-item" class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,8 +27,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
 
-                    <a class="nav-link" id="nav-item" href="savedcampground.html">Visited Campgrounds</a>
-                    <a class="nav-link" id="nav-item" href="wishlist.html">Campground Wishlist</a>
+                    <a class="nav-link" id="nav-item" href="savedcampground.html"><i class="fas fa-campground"></i> Visited Campgrounds</a>
+                    <a class="nav-link" id="nav-item" href="wishlist.html"><i class="far fa-compass"></i> Wishlist</a>
 
                 </div>
             </div>
@@ -38,31 +38,29 @@
     <div class="container-fluid">
         <div class="jumbotron jumbotron-fluid cards">
             <div class="container">
-                <h1 class="display-4"></h1>
-                <p class="lead"><img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent"></p>
+                <img  id="logo"src="../assets/images/CampFoundLogo.png" alt="Logo with Tent">
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid button-wrapper">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <!-- <div class="card"> -->
-                <div class="card-body">
-                    <h5 class="card-title">Visited Campgrounds</h5>
-                    <hr/>
-                    <p class="text-center">View the campgrounds you've visited already and add new one's you've been to!</p>
-                    <button type="button" class="btn btn-outline-primary saved-link" onclick="document.location='savedcampground.html'">Campground I've Been To</button>
-                    <!-- <a href="savedcampground.html" class="saved-link">Card link</a> -->
+                    <div class="card-body hvrbox">
+                    <button type="button" class="btn btn-outline-primary saved-link hvrbox" onclick="document.location='savedcampground.html'"><img class="hvrbox-layer_bottom" id="savedcamplogo"src="../assets/images/Visited.png" alt="Logo with Tent"></button>
+                    <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+                    <div class="hvrbox-text"><a href="../assets/savedcampground.html">Click to view all of your favorite campgrounds!</a></div>
+                    </div>
                 </div>
                 <!-- </div> -->
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <!-- <div class="card"> -->
-                <div class="card-body">
-                    <h5 class="card-title">Wishlist</h5>
-                    <hr/>
-                    <p class="text-center">Use this page to keep track of all the places you'd love to go!</p>
-                    <button type="button" class="btn btn-outline-primary wishlist-link" onclick="document.location='wishlist.html'">Campgrounds I'd Love to Visit</button>
+                <div class="card-body hvrbox">
+                    <button type="button" class="btn btn-outline-primary wishlist-link" onclick="document.location='wishlist.html'"><img class="hvrbox-layer_bottom" id="wishlistlogo"src="../assets/images/Wishlist.png" alt="Logo with Tent"></button>
+                    <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+                    <div class="hvrbox-text"><a href="../assets/wishlist.html"> Click to view all of the places you'd love to go!</a></div>
+                    </div>
                 </div>
                 <!-- </div> -->
             </div>
