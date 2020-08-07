@@ -1,24 +1,39 @@
-//  all of our code goes inside of this
-$(document).ready(function() {
-  // todo: get all of our html variables
+// //  all of our code goes inside of this
+// $(document).ready(function() {
+//   // todo: get all of our html variables
 
   // todo: create a new campsite and send it to our database
-  // !  const newCampSite = {
-  //   it will look something like this
-  //  !     name: nameInput.val().trim(),
-  //   !    location: location.val().trim(),
-  //    !   description: description.val().trim(),
-  // ! }
+  $(".create-form").on("submit", function(event){
+    event.preventDefault();
 
-  // todo: create a function to get all of our campsites
-
-  // todo: create a function to update a post
+    const newCampSite = {
+      // it will look something like this
+      name: $(".campName").val().trim(),
+      location: $(".campLocation").val().trim(),
+      description: campDescription.val().trim(),
+      rating: rating.val().trim(),
+    };
+    $.ajax("api/campsites", {
+      type: "POST",
+      data: newCampSite
+    }).then(function(){
+      console.log("created new campsite");
+      location.reload();
+    });
+  });
 
   //todo: create a function where we create a new campsite
 
   //todo: create a function to delete a post
+  $(".delete-campsite").on("click", function(event){
+    event.preventDefault();
 
-  // ? create the html dynamically to send the campsites and the new campsites
-
-});
+    const id = $(this).data("id");
+    $.ajax("/api/campsites" + id, {
+      type: "DELETE",
+    }).then( function() {
+      console.log("deleted campsite", id);
+      location.reload();
+    });
+  });
 
