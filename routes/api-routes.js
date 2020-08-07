@@ -9,33 +9,35 @@ const { Campsite } = require("../models");
 //GET ROUTES-This shows the data from the datebase on the page
 module.exports = function (app) {
     // GET route for getting all posts
+
     app.get("/api/campsites/", function (req, res) {
         Campsite.findAll({})
             .then(function (Campsite) {
-                res.json(Campsite)
+                res.json(Campsite);
             });
 
     });
 
-    app.get("/api/campsites/rating/:id", function (req, res) {
-        Campsite.findAll({
+    app.get("/api/campsites/rating/:rating", function (req, res) {
+        Campsite.findOne({
             where: {
-                id: req.params.id
+                rating: req.params.rating
+            }
+        }).then(function (Campsite) {
+            res.json(Campsite);
+        });
+    });
+    app.get("/api/campsites/location/:location", function (req, res) {
+        Campsite.findOne({
+            where: {
+                location: req.params.location
             }
         }).then(function (Campsite) {
             res.json(Campsite);
         });
     });
 
-    app.get("/api/campsites/location/:id", function (req, res) {
-        Campsite.findOne({
-            where: {
-                id: req.params.id
-            }
-        }).then(function (Campsite) {
-            res.json(Campsite);
-        });
-    });
+
 
 
 
@@ -60,7 +62,7 @@ module.exports = function (app) {
             location: req.body.location,
             wishlist: req.body.wishlist
         }).then(function (Campsite) {
-            res.json(Campsite)
+            res.json(Campsite);
         });
     });
 
@@ -82,8 +84,8 @@ module.exports = function (app) {
                 }
             }).then(function (Campsite) {
                 res.json(Campsite);
-            })
-    })
+            });
+    });
 
 
 
