@@ -9,6 +9,7 @@ const { Campsite } = require("../models");
 //GET ROUTES-This shows the data from the database on the page
 module.exports = function (app) {
   // GET route for getting all posts
+
   app.get("/api/campsites/", function (req, res) {
     Campsite.findAll({}).then(function (Campsite) {
       res.json(Campsite);
@@ -32,16 +33,20 @@ module.exports = function (app) {
     }).then(function (Campsite) {
       res.json(Campsite);
     });
-  });
 
-  // route to post to campsites
-  app.post("/api/campsites", function (req, res) {
-    Campsite.create({
-      name: req.body.name,
-      body: req.body.body,
-      location: req.body.location,
-    }).then(function (Campsite) {
-      res.json(Campsite);
+    // route to post to campsites
+    app.post("/api/campsites", function (req, res) {
+      // console.log(req.body)
+      Campsite.create({
+        name: req.body.name,
+        description: req.body.description,
+        location: req.body.location,
+        rating: req.body.rating,
+      }).then(function (Campsite) {
+        res.json(Campsite);
+      });
+
+      res.json({ hello: "goodbye" });
     });
   });
 
