@@ -123,11 +123,18 @@ h5 {
 button {
   cursor: pointer;
   font-family: "Raleway", sans-serif;
+
 }
 
 .btn-outline-primary {
   color: transparent;
   border-color: transparent;
+}
+
+.btn{
+    margin-top: 15px;
+    background-color:#556664;
+    color:#fefefe;
 }
 
 p {
