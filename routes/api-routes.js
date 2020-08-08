@@ -3,7 +3,9 @@
 // Dependencies
 
 //Require model
-const { Campsite } = require("../models");
+const {
+  Campsite
+} = require("../models");
 
 //Routes
 //GET ROUTES-This shows the data from the database on the page
@@ -34,32 +36,33 @@ module.exports = function (app) {
       res.json(Campsite);
     });
 
-    // route to post to campsites
-    app.post("/api/campsites", function (req, res) {
-      // console.log(req.body)
+
+  });
+
+  // post route to wishlist campsite
+  // route to post to campsites
+  app.post("/api/campsites", function (req, res) {
+    console.log(req.body);
+    if (req.body.rating) {
       Campsite.create({
         name: req.body.name,
         description: req.body.description,
         location: req.body.location,
         rating: req.body.rating,
+        hasVisited: true
       }).then(function (Campsite) {
         res.json(Campsite);
       });
+    } else {
+      Campsite.create({
+        name: req.body.name,
+        description: req.body.description,
+        location: req.body.location,
+      }).then(function (Campsite) {
+        res.json(Campsite);
 
-      res.json({ hello: "goodbye" });
-    });
-  });
-
-  // post route to wishlist campsite
-  app.post("/api/campsites/wishlist", function (req, res) {
-    Campsite.create({
-      name: req.body.name,
-      description: req.body.description,
-      location: req.body.location,
-      wishlist: req.body.wishlist,
-    }).then(function (Campsite) {
-      res.json(Campsite);
-    });
+      });
+    }
   });
 
   app.delete("/api/campsites/:id", function (req, res) {

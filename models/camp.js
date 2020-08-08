@@ -28,8 +28,8 @@ module.exports = function (sequelize, DataTypes) {
     },
     hasVisited: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
-      defaultValue: true
+      allowNull: false,
+      defaultValue: false
     },
   });
   return Campsite;
