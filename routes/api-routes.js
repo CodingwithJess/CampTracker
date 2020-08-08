@@ -36,17 +36,14 @@ module.exports = function (app) {
 
     // route to post to campsites
     app.post("/api/campsites", function (req, res) {
-      // console.log(req.body)
       Campsite.create({
-        name: req.body.name,
-        description: req.body.description,
-        location: req.body.location,
-        rating: req.body.rating,
+        name: "Rock Creek",
+        description: "This is my description the database",
+        location: "Colorado",
+        rating: "5",
       }).then(function (Campsite) {
         res.json(Campsite);
       });
-
-      res.json({ hello: "goodbye" });
     });
   });
 
