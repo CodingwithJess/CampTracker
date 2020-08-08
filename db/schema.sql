@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS camp_db;
+CREATE DATABASE camp_db;

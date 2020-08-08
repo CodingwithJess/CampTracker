@@ -3,7 +3,9 @@
 // Dependencies
 
 //Require model
-const { Campsite } = require("../models");
+const {
+  Campsite
+} = require("../models");
 
 //Routes
 //GET ROUTES-This shows the data from the database on the page

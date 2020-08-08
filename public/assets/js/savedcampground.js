@@ -5,7 +5,7 @@ $(document).ready(function () {
       name: $(".campName").val().trim(),
       location: $(".campLocation").val().trim(),
       description: $(".campDescription").val().trim(),
-      rating: $(".campRating").val().trim(),
+      rating: $(".campRating").val().trim()
     };
 
     $.ajax({
