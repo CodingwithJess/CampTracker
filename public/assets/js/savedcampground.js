@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $(".save-site").on("click", function(){
+$(document).ready(function () {
+  $(".save-site").on("click", function () {
     const newCampsite = {
       name: $(".campName").val().trim(),
       location: $(".campLocation").val().trim(),
@@ -8,10 +8,12 @@ $(document).ready(function() {
     };
 
     $.ajax({
-        url: "api/campsites",
-        type: "POST",
-        data: newCampsite,
-        success: function() { console.log(newCampsite)}
+      url: "api/campsites",
+      type: "POST",
+      data: newCampsite,
+      success: function () {
+        console.log(newCampsite);
+      },
     });
     //$.ajax("api/campsites", {body: newCampsite})
     //  .then(function() {
@@ -19,9 +21,3 @@ $(document).ready(function() {
     //  });
   });
 });
-
-
-
-
-
-

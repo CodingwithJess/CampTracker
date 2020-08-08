@@ -8,27 +8,27 @@ const db = require("../models");
 
 //app.get for all of the html files/handlebars???
 
-module.exports = function(app){
-  app.get("/", function(req, res){
+module.exports = function (app) {
+  app.get("/", function (req, res) {
     res.render(path.join(__dirname, "../views/index.handlebars"));
   });
 
-  app.get("/saved", function(req, res){
+  app.get("/saved", function (req, res) {
     db.Campsite.findAll({
-      where:{hasVisited:true},
-      raw:true
-    }).then(data => {
-      res.render("savedcampgrounds", {campsite: data})
-    })
+      where: { hasVisited: true },
+      raw: true,
+    }).then((data) => {
+      res.render("savedcampgrounds", { campsite: data });
+    });
   });
-  
-  app.get("/wishlist", function(req, res){
+
+  app.get("/wishlist", function (req, res) {
     db.Campsite.findAll({
-      where:{hasVisited:false},
-      raw:true
-    }).then(data => {
-      res.render("wishlist", {campsite: data})
-    })
+      where: { hasVisited: false },
+      raw: true,
+    }).then((data) => {
+      res.render("wishlist", { campsite: data });
+    });
   });
 };
 // res.render(path.join(__dirname, "../views/savedcampgrounds.handlebars"));

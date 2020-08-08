@@ -1,25 +1,30 @@
-<div class="container">
+<div class="container-saved">
     <div class="row">
         <div class="col-12">
             <div class="card text-center">
                 <div class="card-header">
-                    Add some your favorite campsites that you've previously visited!
+                    <div class="header-text">
+                    <h3>What is life, but one grand adventure!</h3>
+                    <h5>Add all the amazing places you've been below:</h5>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="name">Campsite name</label>
-                        <input type="text" class="campName" placeholder="Name">
+                        <label for="name">Campsite name: </label>
+                        <input type="text" class="campName" placeholder="Goose Creek">
                     </div>
                     <div class="form-group">
-                        <label for="location">Campsite location</label>
-                        <input type="text" class="campLocation" placeholder="Location">
+                        <label for="location">Campsite location: </label>
+                        <input type="text" class="campLocation" placeholder="Sedalia Colorado">
                     </div>
                     <div class="form-group">
-                        <label for="description">Give a brief description of your experience! What did you like?</label>
-                        <textarea type="tex" class="campDescription" placeholder="Your Description"></textarea>
+                        <label for="description">Give a brief description of your experience! What did you like? </label>
+                        <br>
+                        <textarea type="text" class="campDescription" placeholder="Great site! Host was friendly and there are good hiking trails nearby."></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="rating">Pick a rating for this campsite! 5 being perfect, 0 being never again.</label>
+                        <label for="rating">Pick a rating for this campsite!</label>
+                        <sublabel> 5 being perfect, 0 being never again.</sublabel>
                         <select class="form-control campRating" id="rating">
                             <option>0</option>
                             <option>1</option>
@@ -28,7 +33,7 @@
                             <option>4</option>
                             <option>5</option>
                         </select>
-                        <button type="submit" class="btn btn-default">Save your campsite!</button>
+                        <button type="submit" class="btn btn-default">SAVE</button>
                     </div>
                     <button type="submit" class="btn save-site btn-default">Save your campsite!</button>
                 </div>
@@ -59,6 +64,7 @@
                 </div>
                 {{/each}}
             </ul>
+        </div>
     </div>
 </div>
 

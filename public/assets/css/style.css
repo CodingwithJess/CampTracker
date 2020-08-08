@@ -1,156 +1,221 @@
-.button-wrapper{
-    background: rgb(24,33,37);
-    background: linear-gradient(177deg, rgba(24,33,37,1) 14%, rgba(67,83,62,1) 61%);
+.button-wrapper,
+.container-saved,
+.container-wishlist {
+  background: rgb(24, 33, 37);
+  background: linear-gradient(
+    177deg,
+    rgba(24, 33, 37, 1) 14%,
+    rgba(67, 83, 62, 1) 61%
+  );
 }
 
-.container-fluid{
-    padding-left: 0;
-    padding-right: 0;
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar {
-    background-color: #182125;
-    text-align: center;
-    justify-items: center;
+  background-color: #182125;
+  text-align: center;
+  justify-items: center;
+}
+
+label{
+    color: #182125;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
 }
 
 
 #nav-item {
-    color:#fbb55e;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 26px;
+  color: #fbb55e;
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
 }
 
-h5 {text-align: center;
+.card-link {
+  justify-content: center;
 }
 
-.card-link{
-    justify-content: center;
-}
 .jumbotron {
-    background-image: url("../images/CampFound1.jpg");
-    height:700px;
-    background-repeat: no-repeat;
+  background-image: url("../images/CampFound1.jpg");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 750px;
+  height: 750px;
+  display: block;
+  margin: auto;
+}
+
+.form-control {
+  margin-left: 50px;
+}
+
+.form-group {
+  margin: 15px;
+}
+
+.card {
+  background-color: #fefefe;
+  opacity: .90;
+  margin: 60px;
+}
+
+textarea {
+  width: 60%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fefefe;
+  resize: none;
+}
+
+.card-header{
+    background-image: url(../images/formHeader.jpg);
+    background-position: center;
     background-size: cover;
-    background-position: bottom;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white
 }
 
-#logo{
-    width: 750px;
-    height: 750px;
-    display: block;
-    margin: auto;
-}  
-
-.card-body{
-    text-align: center;
-    height:auto;
+.header-text{
+    color: white;
+    opacity: .80;
+    background-color:  #182125;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
 }
-.fav-container{
-    background-color: #f9f2dc;
+
+.card-body {
+  height: auto;
+}
+.fav-container {
+  background-color: #f9f2dc;
+  text-align: center;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 40px;
+}
+
+h3 {
     text-align: center;
-    border-radius: 12px;
-    padding:20px;
-    margin:20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 44px;
 }
 
 h5 {
-    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
     font-size: 24px;
 }
 
-button{
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
+button {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+
 }
 
-.btn-outline-primary{
-    color: transparent;
-    border-color: transparent;
+.btn-outline-primary {
+  color: transparent;
+  border-color: transparent;
 }
 
-p{
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    color: #fbb55e;
+.btn{
+    margin-top: 15px;
+    background-color:#556664;
+    color:#fefefe;
 }
 
-#savedcamplogo{
-    margin:10px;
-    padding:10px;
-    width: 750px;
-    height: 750px;
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  color: #fbb55e;
 }
 
-#wishlistlogo{
-    margin:10px;
-    padding:10px;
-    width: 750px;
-    height: 750px;
+#savedcamplogo {
+  margin: 10px;
+  padding: 10px;
+  width: 750px;
+  height: 750px;
+}
+
+#wishlistlogo {
+  margin: 10px;
+  padding: 10px;
+  width: 750px;
+  height: 750px;
 }
 
 .hvrbox * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .hvrbox {
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
-	max-width: 100vw;
-	height: auto;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100vw;
+  height: auto;
 }
 .hvrbox img {
-	max-width: 100vw;
+  max-width: 100vw;
 }
 .hvrbox .hvrbox-layer_bottom {
-	display: block;
+  display: block;
 }
 .hvrbox .hvrbox-layer_top {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-	padding: 15px;
-	-moz-transition: all 0.4s ease-in-out 0s;
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	-ms-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 .hvrbox:hover .hvrbox-layer_top,
 .hvrbox.active .hvrbox-layer_top {
-	opacity: 1;
+  opacity: 1;
 }
 .hvrbox .hvrbox-text {
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-	font-size: 38px;
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 38px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .hvrbox .hvrbox-text_mobile {
-	font-size: 15px;
-	border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
-	border-top: 1px solid rgba(179, 179, 179, 0.7);
-	margin-top: 5px;
-	padding-top: 2px;
-	display: none;
+  font-size: 15px;
+  border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+  border-top: 1px solid rgba(179, 179, 179, 0.7);
+  margin-top: 5px;
+  padding-top: 2px;
+  display: none;
 }
 .hvrbox.active .hvrbox-text_mobile {
-	display: block;
+  display: block;
 }
+
