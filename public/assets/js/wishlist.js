@@ -1,11 +1,11 @@
 $(document).ready(function () {
   //saves the site to the database when the button is clicked
-  $(".save-site").on("click", function () {
+  $(".saveBtn").on("click", function (event) {
+    event.preventDefault();
     let newCampsite = {
       name: $(".campName").val().trim(),
       location: $(".campLocation").val().trim(),
       description: $(".campDescription").val().trim(),
-      rating: $(".campRating").val().trim(),
     };
 
     $.ajax({
