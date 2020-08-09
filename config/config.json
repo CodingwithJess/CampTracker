@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Dmamjm11!",
+    "password": "basketball5",
     "port": 3306,
     "database": "camp_db",
     "host": "127.0.0.1",
@@ -9,14 +9,14 @@
   },
   "test": {
     "username": "root",
-    "password": "Dmamjm11!!",
+    "password": "basketball5",
     "database": "camp_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Dmamjm11!!",
+    "password": "basketball5",
     "database": "camp_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
