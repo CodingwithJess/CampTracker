@@ -1,26 +1,23 @@
-<div class="container-saved">
-    <div class="row">
-        <div class="col-12">
-            <div class="card text-center">
+         <div class="card text-center">
                 <div class="card-header">
                     <div class="header-text">
                         <h3>What is life, but one grand adventure!</h3>
                         <h5>Add all the amazing places you've been below:</h5>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" data-id="{{this.id}}">
                     <div class="form-group">
                         <label for="name">Campground name: </label>
-                        <input type="text" class="campName" placeholder="Goose Creek">
+                        <input type="text" class="campName" value ="{{name}}">
                     </div>
                     <div class="form-group">
                         <label for="location">Campground location: </label>
-                        <input type="text" class="campLocation" placeholder="Sedalia Colorado">
+                        <input type="text" class="campLocation" value= "{{location}}">
                     </div>
                     <div class="form-group">
                         <label for="description">Give a brief description of your experience! What did you like? </label>
                         <br>
-                        <textarea type="text" class="campDescription" placeholder="Great site! Host was friendly and there are good hiking trails nearby."></textarea>
+                        <textarea type="text" class="campDescription">{{description}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="rating">Pick a rating for this campsite!</label>
@@ -38,28 +35,3 @@
                     {{!-- <button type="submit" class="btn save-site btn-default">Save your campsite!</button> --}}
                 </div>
             </div>
-            <ul>
-                {{#each campsite}}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>{{name}}</h5> 
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Location: {{location}}</p>
-                                    <p class="card-text">Description: {{description}}</p>
-                                    <p class="card-text">Rating: {{rating}}</p>
-                                </div>
-                                  <a href="/update" class="btn">Edit</a>
-                                <button class="delete-btn btn" data-id="{{id}}">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-</div>
