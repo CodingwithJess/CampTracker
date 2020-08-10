@@ -65,6 +65,20 @@ module.exports = function (app) {
     }
   });
 
+  app.put("/api/campsites/:id", (req, res) => {
+    console.log(req.body);
+    Campsite.update({
+      hasVisited: true
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }).then(data => {
+      res.json(data);
+    });
+
+  });
+
   app.delete("/api/campsites/:id", function (req, res) {
     Campsite.destroy({
       where: {
