@@ -30,5 +30,16 @@ module.exports = function (app) {
       res.render("wishlist", { campsite: data });
     });
   });
+
+  app.get("/update", function (req, res) {
+    db.Campsite.FindOne({
+      where: {
+        id: id.req.params
+      }
+    }).then((data) => {
+      res.render("update", { campsite: data });
+    });
+  });
 };
+
 // res.render(path.join(__dirname, "../views/savedcampgrounds.handlebars"));

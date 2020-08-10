@@ -10,11 +10,11 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="name">Campsite name: </label>
+                        <label for="name">Campground name: </label>
                         <input type="text" class="campName" placeholder="Goose Creek">
                     </div>
                     <div class="form-group">
-                        <label for="location">Campsite location: </label>
+                        <label for="location">Campground location: </label>
                         <input type="text" class="campLocation" placeholder="Sedalia Colorado">
                     </div>
                     <div class="form-group">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="rating">Pick a rating for this campsite!</label>
-                        <sublabel> 5 being perfect, 0 being never again.</sublabel>
+                        <sublabel>(5 being perfect, 0 being never again.)</sublabel>
                         <select class="form-control campRating" id="rating">
                             <option>0</option>
                             <option>1</option>
@@ -35,8 +35,8 @@
                             <option>4</option>
                             <option>5</option>
                         </select>
-                        <button type="submit" class="btn save-site btn-default">SAVE</button>
                     </div>
+                    <button type="submit" class="btn save-site btn-default save-btn">Save</button>
                     {{!-- <button type="submit" class="btn save-site btn-default">Save your campsite!</button> --}}
                 </div>
             </div>
@@ -45,24 +45,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="card text-center">
+                            <div class="card">
                                 <div class="card-header">
-                                    {{name}}
+                                    <h5>{{name}}</h5>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">{{location}}</h5>
-                                    <p class="card-text">{{description}}
-                                    </p>
+                                    <p class="card-text">Location: {{location}}</p>
+                                    <p class="card-text">Description: {{description}}</p>
+                                    <p class="card-text">Rating: {{rating}}</p>
                                 </div>
-                                <div class="card-footer text-muted">
-                                    {{rating}}
-                                </div>
-                                <button class="delete-btn" data-id="{{id}}">
-                                    Delete campsite
-                                </button>
-                                <button class="edit-site" data-id="{{this.id}}">
-                                    Edit campsite
-                                </button>
+                                <a href="/update" class="btn">Edit</a>
+                                <button class="delete-btn btn" data-id="{{id}}">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -72,3 +65,10 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>

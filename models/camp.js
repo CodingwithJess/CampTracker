@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     rating: {
       type: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        len: [1, 200]
+        len: [1, 1000]
       }
     },
     hasVisited: {
@@ -36,14 +36,5 @@ module.exports = function (sequelize, DataTypes) {
 };
 
 
-//Table for campsites ----Visited will be boolean value to filter out campsites between visited and wishlist
-
-//To include on table:
-//Campsite Name-STRING
-//Campsite Location-STRING
-//Rating-INTEGER
-//Comments-TEXT
-//hazVisited-BOOLEAN
-//wishlist
 
 
