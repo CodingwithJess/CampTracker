@@ -79,6 +79,7 @@ module.exports = function (app) {
       res.json(Campsite);
     });
   });
+
   app.put("/api/campsites", function (req, res) {
     Campsite.update(req.body, {
       where: {
