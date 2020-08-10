@@ -18,9 +18,11 @@
                         <input type="text" class="campLocation" placeholder="Sedalia Colorado">
                     </div>
                     <div class="form-group">
-                        <label for="description">Give a brief description of your experience! What did you like? </label>
+                        <label for="description">Give a brief description of your experience! What did you like?
+                        </label>
                         <br>
-                        <textarea type="text" class="campDescription" placeholder="Great site! Host was friendly and there are good hiking trails nearby."></textarea>
+                        <textarea type="text" class="campDescription"
+                            placeholder="Great site! Host was friendly and there are good hiking trails nearby."></textarea>
                     </div>
                     <div class="form-group">
                         <label for="rating">Pick a rating for this campsite!</label>
@@ -45,14 +47,14 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>{{name}}</h5> 
+                                    <h5>{{name}}</h5>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">Location: {{location}}</p>
                                     <p class="card-text">Description: {{description}}</p>
                                     <p class="card-text">Rating: {{rating}}</p>
                                 </div>
-                                  <a href="/update" class="btn">Edit</a>
+                                <a href="/update/{{id}}" class="btn">Edit</a>
                                 <button class="delete-btn btn" data-id="{{id}}">Delete</button>
                             </div>
                         </div>
@@ -64,5 +66,9 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>

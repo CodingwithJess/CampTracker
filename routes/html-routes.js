@@ -31,13 +31,17 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/update", function(req, res){
+  app.get("/update/:id", function (req, res) {
     db.Campsite.findOne({
-      where: {id: req.body.id}
+      where: {
+        id: req.params.id
+      },
+      raw: true
     }).then((data) => {
-      res.render("update");
       console.log(data);
+      res.render("update", data);
     });
   });
 };
+
 // res.render(path.join(__dirname, "../views/savedcampgrounds.handlebars"));
