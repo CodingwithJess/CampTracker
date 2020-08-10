@@ -20,6 +20,26 @@ $(document).ready(function () {
     console.log(newCampsite);
   });
 
+  //saves the site to the database when the button is clicked
+  $(".visit-btn").on("click", function (event) {
+    let id = $(this).data("id");
+    let newVisitState = {
+      hasVisited: 1
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/campsites/" + id, {
+      type: "PUT",
+      data: newVisitState
+    }).then(
+      function () {
+        console.log("changed visited to true");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
   function campSearch() {
     event.preventDefault();
     const state = $(".stateCode").val().trim().toUpperCase();
