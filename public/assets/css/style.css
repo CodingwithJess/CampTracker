@@ -20,8 +20,6 @@
 
 .navbar {
   background-color: #182125;
-  text-align: center;
-  justify-items: center;
 }
 
 label{
@@ -30,11 +28,12 @@ label{
     font-size: 20px;
 }
 
-
-#nav-item {
+#nav-item{
   color: #fbb55e;
   font-family: "Quicksand", sans-serif;
   font-size: 26px;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .card-link {
@@ -159,7 +158,7 @@ p {
   width: 750px;
   height: 750px;
 }
-
+/*styling code for hover links on homepage */
 .hvrbox * {
   box-sizing: border-box;
 }
@@ -212,7 +211,7 @@ p {
 }
 .hvrbox .hvrbox-text_mobile {
   font-size: 15px;
-  border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+  border-top: 1px solid rgb(179, 179, 179); /* for older browsers */
   border-top: 1px solid rgba(179, 179, 179, 0.7);
   margin-top: 5px;
   padding-top: 2px;
