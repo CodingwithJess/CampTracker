@@ -10,23 +10,25 @@ $(document).ready(function () {
     };
 
     $.ajax({
-      url: "/api/campsites",
+      url: "api/campsites",
       method: "POST",
       data: newCampsite
-    }).then(function () {
+    }).then(function() {
       location.reload();
+      console.log(newCampsite);
     });
 
+    console.log(newCampsite);
   });
 
   //Delete the campsite we inserted
-  $(".delete-btn").on("click", function () {
+  $(".delete-btn").on("click", function() {
     let id = $(this).data("id");
 
     $.ajax({
       url: "api/campsites/" + id,
       method: "DELETE",
-    }).then(function () {
+    }).then(function() {
       location.reload();
     });
   });

@@ -1,11 +1,3 @@
-// ! have to use this to use the api keys;
-// require("dotenv").config();
-
-// ! api key variable
-// ! this is how you use the api key
-// const apiKey = "CZVR6fXJif7hAnfiau0MJRZbv1q88WsLspf50c4o"
-// function call() {
-
 $(document).ready(function () {
   //saves the site to the database when the button is clicked
   $(".saveBtn").on("click", function (event) {
@@ -52,6 +44,7 @@ $(document).ready(function () {
 
   async function render() {
     const data = await campSearch();
+    console.log(data);
     $.ajax({
       url: "/api/campsites",
       method: "POST",

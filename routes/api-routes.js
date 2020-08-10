@@ -1,23 +1,18 @@
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-
+//api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // Dependencies
-
 //Require model
 const {
   Campsite
 } = require("../models");
-
 //Routes
 //GET ROUTES-This shows the data from the database on the page
 module.exports = function (app) {
   // GET route for getting all posts
-
   app.get("/api/campsites/", function (req, res) {
     Campsite.findAll({}).then(function (Campsite) {
       res.json(Campsite);
     });
   });
-
   app.get("/api/campsites/rating/:rating", function (req, res) {
     Campsite.findOne({
       where: {
@@ -35,10 +30,7 @@ module.exports = function (app) {
     }).then(function (Campsite) {
       res.json(Campsite);
     });
-
-
   });
-
   // post route to wishlist campsite
   // route to post to campsites
   app.post("/api/campsites", function (req, res) {
@@ -60,7 +52,6 @@ module.exports = function (app) {
         location: req.body.location,
       }).then(function (Campsite) {
         res.json(Campsite);
-
       });
     }
   });
@@ -88,7 +79,6 @@ module.exports = function (app) {
       res.json(Campsite);
     });
   });
-
   app.put("/api/campsites", function (req, res) {
     Campsite.update(req.body, {
       where: {
@@ -99,7 +89,6 @@ module.exports = function (app) {
     });
   });
 };
-
 // Campsite Name-STRING
 // //Campsite Location-STRING
 // //Rating-INTEGER

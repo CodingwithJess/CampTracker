@@ -8,7 +8,7 @@
     <!-- bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		 <!-- jQuery -->
+    <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- fontAwesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -21,7 +21,8 @@
 	<body>
 		{{!-- NAVBAR --}}
 		<div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light text-centered">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
             <a id="nav-item" class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +33,7 @@
                     <a class="nav-link" id="nav-item" href="saved"><i class="fas fa-campground"></i> Visited Campgrounds</a>
                     <a class="nav-link" id="nav-item" href="wishlist"><i class="far fa-compass"></i> Wishlist</a>
                 </div>
+            </div>
             </div>
         </nav>
     </div>
@@ -44,6 +46,8 @@
         </div>
     </div>
 		{{{ body }}}
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 		<script src="../../assets/js/index.js"></script>
 		<script src="../../assets/js/savedcampground.js"></script>
 		<script src="../../assets/js/wishlist.js"></script>
