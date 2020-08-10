@@ -40,35 +40,6 @@
                     {{!-- <button type="submit" class="btn save-site btn-default">Save your campsite!</button> --}}
                 </div>
             </div>
-            <ul>
-                {{#each campsite}}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card text-center">
-                                <div class="card-header">
-                                    {{name}}
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{location}}</h5>
-                                    <p class="card-text">{{description}}
-                                    </p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    {{rating}}
-                                </div>
-                                <button class="delete-btn" data-id="{{id}}">
-                                    Delete campsite
-                                </button>
-                                <button class="edit-site" data-id="{{this.id}}">
-                                    Edit campsite
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </ul>
         </div>
     </div>
 </div>
