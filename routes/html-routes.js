@@ -31,13 +31,15 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/update", function (req, res) {
-    db.Campsite.FindOne({
+  app.get("/update/:id", function (req, res) {
+    db.Campsite.findOne({
       where: {
-        id: id.req.params
-      }
+        id: req.params.id
+      },
+      raw: true
     }).then((data) => {
-      res.render("update", { campsite: data });
+      console.log(data);
+      res.render("update", data);
     });
   });
 };

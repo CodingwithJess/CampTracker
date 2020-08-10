@@ -12,7 +12,7 @@ $(document).ready(function () {
 
         let id = $(this).data("id");
 
-        $.ajax("/api/campsites" + id, {
+        $.ajax("/api/campsites/" + id, {
             type: "PUT",
             data: updatedSite
         }).then(function () {
