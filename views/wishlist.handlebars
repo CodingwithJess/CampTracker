@@ -25,6 +25,22 @@
                     <button type="submit" class="btn btn-default saveBtn save-btn">Save</button>
                     </form>
                 </div>
+                 <div class="card text-center">
+                <div class="card-header">
+                    <div class="header-text">
+                        <h5>Not sure where to go? Get a random campground in your state!</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="state">Your state</label>
+                            <input type="text" class="stateCode" placeholder="CO">
+                        </div>
+                        <button type="submit" class="btn btn-default searchBtn">Feeling lucky</button>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
         <ul>
@@ -40,6 +56,9 @@
                                 <p class="card-text">Location: {{location}}</p>
                                 <p class="card-text">Description: {{description}}</p>
                             </div>
+                            <button class="visit-btn" data-id="{{id}}">
+                                Already visited? Save it to your favorites list!
+                            </button>
                             <button class="delete-btn" data-id="{{id}}">
                                 Delete
                             </button>
@@ -51,4 +70,7 @@
         </ul>
         </body>
     </div>
-</div>    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
