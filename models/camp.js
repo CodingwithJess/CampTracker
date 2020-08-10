@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     rating: {
       type: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        len: [1, 200]
+        len: [1, 1000]
       }
     },
     hasVisited: {
