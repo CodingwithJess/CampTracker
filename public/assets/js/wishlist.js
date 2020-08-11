@@ -54,7 +54,7 @@ $(document).ready(function () {
         let i = Math.floor(Math.random() * response.data.length);
         const searchData = {
           name: response.data[i].name,
-          location: response.data[i].addresses[0].city + ", " + state,
+          location: state || response.data[i].addresses[0].city + ", " + state,
           description: response.data[i].description
         };
         return resolve(searchData);
