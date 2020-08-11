@@ -42,6 +42,10 @@ module.exports = function (app) {
       res.render("update", data);
     });
   });
+
+  app.get("*", function(req, res){
+    res.status(404).render("error");
+  });
 };
 
 // res.render(path.join(__dirname, "../views/savedcampgrounds.handlebars"));
