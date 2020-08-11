@@ -5,7 +5,7 @@ https://camp-tracker.herokuapp.com
 
 ## Description
 As a user, I want to track campgrounds that I’ve been to previously AND enter campgrounds that I want to visit in the future. 
-I want to see all my previous entries and be able to edit/update. I want to be able to update campsites from my wishlist page to my visited page.
+I want to be able to update campsites from my wishlist page to my visited page.
 
 
 ## Image of deployed site
@@ -17,6 +17,7 @@ I want to see all my previous entries and be able to edit/update. I want to be a
 * [Sequelize](https://sequelize.org/)
 * [Node.js](https://nodejs.org/en/)
 * [jQuery](https://jquery.com/)
+* [Loading.io](https://loading.io/)
 
 ## Resources
 * Header Background Image:<span>Photo by <a href="https://unsplash.com/@ihor_malytskyi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ihor Malytskyi</a> on <a href="https://unsplash.com/s/photos/camping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
