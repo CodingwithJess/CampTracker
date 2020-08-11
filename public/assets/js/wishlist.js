@@ -1,5 +1,7 @@
 $(document).ready(function () {
   //saves the site to the database when the button is clicked
+  $(".loader").hide();
+
   $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let newCampsite = {
@@ -75,6 +77,7 @@ $(document).ready(function () {
   }
   $(".searchBtn").on("click", function (event) {
     event.preventDefault();
+    $(".loader").show();
     render();
   });
 
