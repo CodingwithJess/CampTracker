@@ -31,6 +31,10 @@ label{
     font-size: 20px;
 }
 
+.wishlist-link, .saved-link{
+  background-color: transparent;
+}
+
 #nav-item{
   color: #fbb55e;
   font-family: "Quicksand", sans-serif;
