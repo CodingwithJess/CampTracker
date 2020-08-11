@@ -16,11 +16,14 @@
 
 .container{
   border: transparent;
+  justify-content: center;
 }
 
 .navbar {
   background-color: #182125;
 }
+
+
 
 label{
     color: #182125;
@@ -133,10 +136,15 @@ button {
   border-color: transparent;
 }
 
-.save-btn, .delete-btn{
-    margin-top: 15px;
+.save-btn, .delete-btn, .btn{
+    margin: 10px;
+    padding: 10px;
     background-color:#556664;
     color:#fefefe;
+}
+
+.delete-btn{
+ background-color:#853b13 ;
 }
 
 p {
